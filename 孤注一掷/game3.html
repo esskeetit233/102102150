@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骰子大战</title>
+    <link rel="stylesheet" href="./game3.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./game3.js"></script>
+</head>
+<body>
+    <!-- 开始页面 -->
+    <div class="open">
+        <button class="play1" onclick="play1_open()">对战模式</button>
+    </div>
+
+    <!-- 初始化选择 -->
+    <div class="begin">
+        <div class="chip_begin">初始筹码：<input type="text" class="word1" value=1000></div>
+        <div class="games_begin">总局数: <input type="text" class="word2" value=3></div>
+        <div class="players_begin">玩家个数: <input type="text" class="word3" value=2></div>
+        <div class="redouble_begin">初始倍率: <input type="text" class="word4" value=1></div>
+        <button class="open_game" onclick="do_open()">开始</button>
+        <div class="big_box"></div>
+        <div class="ai_players">AI个数: <input type="text" class="word4" value="0"></div>
+    </div>
+
+    <!-- 对局状态区域 -->
+    <div class="status-box">
+        <button class="menu" onclick="location.reload()">重新开始</button>
+        <div class="rounds">当前轮数: 1</div>
+        <div class="all_games">总局数: 20</div>
+        <div class="next_games">剩余局数: 20</div>
+        <div class="magnification">总倍率: 1</div>
+    </div>
+
+    <!-- 排行榜区域 -->
+    <div class="leaderboard-box"></div>
+
+    <!-- 投掷区域 -->
+    <div class="throw-box">
+        <div class="dice">
+            <div class="dice1" onclick="dice0_click()"><img src="img3/color3.png"></div>
+            <div class="dice2" onclick="dice1_click()"><img src="img3/color3.png"></div>
+            <div class="dice3" onclick="dice2_click()"><img src="img3/color3.png"></div>
+            <div class="dice4" onclick="dice3_click()"><img src="img3/color3.png"></div>
+            <div class="dice5" onclick="dice4_click()"><img src="img3/color3.png"></div>
+            <p class="number1">1</p>
+            <p class="number2">2</p>
+            <p class="number3">3</p>
+            <p class="number4">4</p>
+            <p class="number5">5</p>
+        </div>
+        <div class="roll">
+            <!-- <button onclick="roll_click()">摇骰子</button> -->
+        </div>
+        <button class="redouble0" id="redouble" onclick="redouble0_click()">不加倍</button>
+        <button class="redouble1" id="redouble" onclick="redouble1_click()">1倍</button>
+        <button class="redouble2" id="redouble" onclick="redouble2_click()">2倍</button>
+        <button class="redouble3" id="redouble" onclick="redouble3_click()">3倍</button>
+    </div>
+
+    <!-- 选择区域 -->
+    <div class="select-box">
+        <div class="locked">
+            <p>已锁定</p>
+        </div>
+        <div class="select">
+            <div class="dices1" onclick="unlock0()"><img src="img3/color1.png"></div>
+            <div class="dices2" onclick="unlock1()"><img src="img3/color1.png"></div>
+            <div class="dices3" onclick="unlock2()"><img src="img3/color1.png"></div>
+            <div class="dices4" onclick="unlock3()"><img src="img3/color1.png"></div>
+            <div class="dices5" onclick="unlock4()"><img src="img3/color1.png"></div>
+            <p class="position1">0</p>
+            <p class="position2">0</p>
+            <p class="position3">0</p>
+            <p class="position4">0</p>
+            <p class="position5">0</p>
+        </div>
+        <button class="lock" onclick="lock_result()">锁定</button>
+    </div>
+</body>
+</html>

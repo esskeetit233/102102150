@@ -1,0 +1,727 @@
+/* 公共区域 */
+* {
+    margin: 0;/* 外边距 */
+    padding: 0;/* 内边距 */
+}
+
+input {
+    outline: none;
+    border: none;/* 边框 */
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1;
+    left: 0%;
+    top: 0%;
+}
+
+button {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+body{background-color: #17181A;}
+
+/* 开始页面 */
+.open {
+    position: absolute;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #17181A
+}
+
+.play1 {
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    height: 80px;
+    width: 230px;
+    border-radius: 20px;
+    background-color: #C8BD88;
+}
+
+/* 初始化选择 */
+.begin {
+    position: absolute;
+    z-index: 8888;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #17181A
+}
+
+.chip_begin {
+    position: absolute;
+    z-index: 500;
+    top: 15%;
+    left: 43%;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    align-items: center; /*纵轴 */
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+.word1 {
+    position: absolute;
+    top: 28%;
+    left: 43%;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center; /*纵轴 */
+}
+
+.games_begin {
+    position: absolute;
+    z-index: 500;
+    top: 28%;
+    left: 43%;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    align-items: center; /*纵轴 */
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+.word2 {
+    position: absolute;
+    top: 28%;
+    left: 43%;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center; /*纵轴 */
+}
+
+.players_begin {
+    position: absolute;
+    z-index: 500;
+    top: 41%;
+    left: 43%;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    align-items: center; /*纵轴 */
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+.word3 {
+    position: absolute;
+    top: 28%;
+    left: 43%;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center; /*纵轴 */
+}
+
+.redouble_begin {
+    position: absolute;
+    z-index: 500;
+    top: 54%;
+    left: 43%;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    align-items: center; /*纵轴 */
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+.word4 {
+    position: absolute;
+    top: 28%;
+    left: 43%;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center; /*纵轴 */
+}
+
+.ai_players {
+    position: absolute;
+    z-index: 500;
+    top: 67%;
+    left: 43%;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    align-items: center; /*纵轴 */
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+.ward4 {
+    position: absolute;
+    top: 28%;
+    left: 43%;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center; /*纵轴 */
+}
+
+.open_game {
+    position: absolute;
+    z-index: 500;
+    top: 80%;
+    left: 43%;
+    height: 80px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.big_box {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    height: 700px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+/* 对局状态区域 */
+.status-box {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    height: 100px;
+    width: 1110px;
+    border-radius: 20px;
+    background-color: #25272A;
+}
+
+.menu {
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    height: 50px;
+    width: 130px;
+}
+
+.rounds {
+    position: absolute;
+    top: 25%;
+    left: 21%;
+    height: 50px;
+    width:130px;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+    background-color: #25272A;
+    color: #FFFFFF;
+}
+
+.all_games {
+    position: absolute;
+    top: 25%;
+    left: 41%;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+    background-color: #25272A;
+    color: #FFFFFF;
+}
+
+.next_games {
+    position: absolute;
+    top: 25%;
+    left: 61%;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+    background-color: #25272A;
+    color: #FFFFFF;
+}
+
+.magnification{
+    position: absolute;
+    top: 25%;
+    left: 81%;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+    background-color: #25272A;
+    color: #FFFFFF;
+}
+
+/* 排行榜区域 */
+.leaderboard-box {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    height: 778px;
+    width: 520px;
+    background-color: #25272A;
+    border-radius: 20px;
+    overflow:scroll;
+}
+
+.player {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    height: 100px;
+    width: 460px;
+    border-radius: 10px;
+    background-color: #C8BD88;
+}
+
+.avatar {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    height: 35px;
+    width: 35px;
+    border-radius: 20000px;
+    overflow: hidden;
+}
+
+.name {
+    position: absolute;
+    top: 3%;
+    left: 12%;
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+}
+
+.chip {
+    position: absolute;
+    top: 3%;
+    left: 57%;
+    height: 35px;
+    width: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+}
+
+.dicess1 {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    height: 40px;
+    width: 40px;
+    border-radius: 13.33px;
+    overflow: hidden;
+}
+
+.dicess2 {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    height: 40px;
+    width: 40px;
+    border-radius: 13.33px;
+    overflow: hidden;
+}
+
+.dicess3 {
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    height: 40px;
+    width: 40px;
+    border-radius: 13.33px;
+    overflow: hidden;
+}
+
+.dicess4 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    height: 40px;
+    width: 40px;
+    border-radius: 13.33px;
+    overflow: hidden;
+}
+
+.dicess5 {
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    height: 40px;
+    width: 40px;
+    border-radius: 13.33px;
+    overflow: hidden;
+}
+
+.mark {
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    height: 40px;
+    width: 170px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content:left; /*主轴 */
+    align-items: center; /*纵轴 */
+}
+
+/* 投掷区域 */
+.throw-box {
+    position: absolute;
+    top: 15%;
+    left: 1%;
+    height: 450px;
+    width: 1110px; 
+    border-radius: 20px;
+    background-color: #25272A;
+}
+
+.dice {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    height: 150px;
+    width: 1000px;
+}
+
+.dice1 {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    height: 120px;
+    width: 120px; 
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.dice2 {
+    position: absolute;
+    top: 10%;
+    left: 24%;
+    height: 120px;
+    width: 120px; 
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.dice3 {
+    position: absolute;
+    top: 10%;
+    left: 44%;
+    height: 120px;
+    width: 120px; 
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.dice4 {
+    position: absolute;
+    top: 10%;
+    left: 64%;
+    height: 120px;
+    width: 120px; 
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.dice5 {
+    position: absolute;
+    top: 10%;
+    left: 84%;
+    height: 120px;
+    width: 120px; 
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.number1 {
+    position: absolute;
+    top: 42%;
+    left: 19%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #25272A;
+}
+
+.number2 {
+    position: absolute;
+    top: 42%;
+    left: 39%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #25272A;
+}
+
+.number3 {
+    position: absolute;
+    top: 42%;
+    left: 59%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #25272A;
+}
+
+.number4 {
+    position: absolute;
+    top: 42%;
+    left: 79%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #25272A;
+}
+
+.number5 {
+    position: absolute;
+    top: 42%;
+    left: 97%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #25272A;
+}
+
+.roll {
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    height: 80px;
+    width: 180px; 
+    border-radius: 44px;
+    overflow: hidden;
+}
+
+.redouble0 {
+    position: absolute;
+    top: 75%;
+    left: 8%;
+    height: 60px;
+    width: 120px; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.redouble1 {
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    height: 60px;
+    width: 120px; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.redouble2 {
+    position: absolute;
+    top: 75%;
+    left: 52%;
+    height: 60px;
+    width: 120px; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.redouble3 {
+    position: absolute;
+    top: 75%;
+    left: 74%;
+    height: 60px;
+    width: 120px; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 选择区域 */
+.select-box {
+    position: absolute;
+    top: 70%;
+    left: 1%;
+    height: 200px;
+    width: 1110px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #25272A;
+}
+
+.locked {
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    height: 100px;
+    width: 100px; 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #FFFFFF;
+    background-color: #25272A;
+}
+
+.select {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    height: 100px;
+    width: 670px; 
+    border-radius: 10px;
+    background-color: #3c3c3c;
+}
+
+.dices1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    height: 60px;
+    width: 60px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dices2 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 60px;
+    width: 60px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dices3 {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    height: 60px;
+    width: 60px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dices4 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60px;
+    width: 60px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dices5 {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    height: 60px;
+    width: 60px; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.position1 {
+    position: absolute;
+    top: 84%;
+    left: 8.5%;
+    height: 13px;
+    width: 13px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #3c3c3c;
+}
+
+.position2 {
+    position: absolute;
+    top: 84%;
+    left: 23.5%;
+    height: 13px;
+    width: 13px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #3c3c3c;
+}
+
+.position3 {
+    position: absolute;
+    top: 84%;
+    left: 38.5%;
+    height: 13px;
+    width: 13px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #3c3c3c;
+}
+
+.position4 {
+    position: absolute;
+    top: 84%;
+    left: 53.5%;
+    height: 13px;
+    width: 13px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #3c3c3c;
+}
+
+.position5 {
+    position: absolute;
+    top: 84%;
+    left: 68.5%;
+    height: 13px;
+    width: 13px;
+    display: flex;
+    justify-content: center; /*主轴 */
+    align-items: center; /*纵轴 */
+    color: #3c3c3c;
+}
+
+.lock {
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    height: 100px;
+    width: 100px; 
+    border-radius: 10px;
+    overflow: hidden;
+}
